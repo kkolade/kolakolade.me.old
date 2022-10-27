@@ -5,14 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kola Kolade | Fullstack web developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <header class="main-header">
+    <header class="main-header">
+      <div class="container main-header__container">
         <a href="#" class="brand">KolaKolade</a>
         <nav class="main-nav">
-          <img src="" alt="" class="hamburger" />
+          <div class="main-nav__hamburger">
+            <span class="main-nav__hamburger-element"></span>
+            <span class="main-nav__hamburger-element"></span>
+            <span class="main-nav__hamburger-element"></span>
+          </div>
           <ul class="main-nav__list">
             <li class="main-nav__list-item">
               <a href="" class="main-nav__link">Portfolio</a>
@@ -25,12 +34,14 @@
             </li>
           </ul>
         </nav>
-      </header>
-      <section class="hero">
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero-container">
         <h1 class="hero__headline">
-          <span class="hero__headline--main">I'm Kola Kolade</span
-          ><span class="hero__headline--sub"
-            >Looking forward to working with you</span
+          <span class="hero__headline--main">I'm Kola Kolade</span><br /><span
+            class="hero__headline--sub"
+            >Glad to see you</span
           >
         </h1>
         <p class="hero__description">
@@ -41,9 +52,33 @@
         </p>
         <a href="" class="hero__cta">let's connect</a>
         <div class="hero__social-link">
-          <span></span><span></span><span></span><span></span><span></span>
+          <img
+            src="asset/images/twitter.png"
+            alt="twitter logo"
+            class="hero__social-link-image"
+          />
+          <img
+            src="asset/images/Linkedin icon.png"
+            alt="linked-n logo"
+            class="hero__social-link-image"
+          />
+          <img
+            src="asset/images/medium.png"
+            alt="medium logo"
+            class="hero__social-link-image"
+          />
+          <img
+            src="asset/images/github.png"
+            alt="github logo"
+            class="hero__social-link-image"
+          />
+          <img
+            src="asset/images/angellist.png"
+            alt="angellist logo"
+            class="hero__social-link-image"
+          />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </body>
 </html>

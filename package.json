@@ -1,0 +1,19 @@
+{
+  "name": "kolakolade.me",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kkolade/kolakolade.me.git"
+  },
+  "author": "{'name': 'Kola Kolade', 'email': 'kolakolade@gmail.com','url': 'www.kolakolade.me'}",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kkolade/kolakolade.me/issues"
+  },
+  "homepage": "https://github.com/kkolade/kolakolade.me#readme"
+}

@@ -67,6 +67,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  cursor: pointer;
 }
 
 .main-nav__hamburger-element {
@@ -82,8 +83,10 @@ img {
 
 .hero {
   height: 90vh;
-  background: url("../asset/images/header-bg-mobile.jpg") center / cover
-    no-repeat;
+  background-image: url("../asset/images/header-bg-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;

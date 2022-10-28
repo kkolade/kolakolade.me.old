@@ -1,0 +1,127 @@
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+  font-size: 1rem;
+  color: #444;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand {
+  padding: 10px 0;
+  font-weight: 900;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav__hamburger {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.main-nav__hamburger-element {
+  display: inline-block;
+  width: 12px;
+  border-bottom: 2px solid #acb7c3;
+}
+
+.main-nav__list {
+  /* display: flex; */
+  display: none;
+}
+
+.hero {
+  height: 90vh;
+  background-image: url("../asset/images/header-bg-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__headline {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.hero__cta {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #7f8cff;
+  margin-bottom: 30px;
+}
+
+.hero__social-link-image {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+/* Breakpoint syles */
+
+/* @media (min-width: 480px) {
+} */
+
+@media (min-width: 680px) {
+  .hero {
+    height: 90vh;
+    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
+  }
+}
+
+/* @media (min-width: 1024px) {
+} */

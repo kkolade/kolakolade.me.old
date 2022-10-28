@@ -109,6 +109,7 @@ img {
   grid-template-rows: auto auto auto auto;
   row-gap: 110px;
 }
+
 .work__card {
   background-color: #fff;
   border-radius: 16px;
@@ -122,7 +123,7 @@ img {
 .work__card-text-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  /* gap: 16px; */
 }
 
 .work__card-title {
@@ -238,6 +239,7 @@ img {
   background-color: #396df2;
   box-shadow: 0 5px 5px rgba(57, 109, 242, 0.2);
 }
+
 .description-text {
   font-weight: 400;
   font-size: 15px;

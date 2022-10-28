@@ -43,11 +43,6 @@ img {
   border-style: none;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
 /* Header Section */
 
 .main-header__container {
@@ -97,22 +92,10 @@ img {
   align-items: center;
 }
 
-.hero__headline {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-}
-
-.hero__cta {
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #7f8cff;
-  margin-bottom: 30px;
-}
-
-.hero__social-link-image {
-  display: inline-block;
-  padding-right: 20px;
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 /* Work Section */
@@ -172,12 +155,6 @@ img {
   border-radius: 50%;
 }
 
-.work__card-description {
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
-}
-
 .work__card-technology-list {
   display: flex;
   gap: 12px;
@@ -193,22 +170,40 @@ img {
   border-radius: 8px;
 }
 
-/* Breakpoint syles */
-
-/* @media (min-width: 480px) {
-} */
-
-@media (min-width: 680px) {
-  .hero {
-    height: 90vh;
-    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
-  }
+/* Container */
+.about__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-/* @media (min-width: 1024px) {
-} */
-
 /* Utility Class */
+.container {
+  width: 90%;
+  margin: 100px auto;
+}
+
+.row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.headline-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+}
+
+.social-links {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.cta-primary {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #7f8cff;
+}
 
 .btn-primary {
   font-weight: 500;
@@ -227,3 +222,23 @@ img {
   background-color: #396df2;
   box-shadow: 0 5px 5px rgba(57, 109, 242, 0.2);
 }
+.description-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+/* Breakpoint syles */
+
+/* @media (min-width: 480px) {
+} */
+
+@media (min-width: 680px) {
+  .hero {
+    height: 90vh;
+    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
+  }
+}
+
+/* @media (min-width: 1024px) {
+} */

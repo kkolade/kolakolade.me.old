@@ -102,16 +102,12 @@ img {
 
 .work {
   background-color: #e5e5e5;
-  /* margin: 0 auto; */
-  padding: 120px 0;
 }
 
 .work__container {
   display: grid;
   grid-template-rows: auto auto auto auto;
-  /* align-items: center; */
   row-gap: 110px;
-  /* justify-content: center; */
 }
 .work__card {
   background-color: #fff;
@@ -177,10 +173,30 @@ img {
   gap: 18px;
 }
 
+.about__skills {
+  width: 87.5%;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.about__item {
+  position: relative;
+  padding: 16px 0;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.about__item-icon {
+  position: absolute;
+  right: 5px;
+}
+
 /* Utility Class */
 .container {
   width: 90%;
-  margin: 100px auto;
+  margin: 0 auto;
+  padding: 120px 0;
 }
 
 .row {
@@ -226,6 +242,15 @@ img {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+}
+
+/* Items to hide until javascript */
+.hidden {
+  visibility: hidden;
+}
+
+.no-border {
+  border: none;
 }
 
 /* Breakpoint syles */

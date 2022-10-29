@@ -123,6 +123,7 @@ img {
 .work__card-text-content {
   display: flex;
   flex-direction: column;
+  gap: 18px;
 }
 
 .work__card-title {
@@ -155,6 +156,7 @@ img {
   display: flex;
   gap: 12px;
   font-weight: 500;
+  font-size: 12px;
   line-height: 16px;
   letter-spacing: 3%;
   color: #6070ff;
@@ -190,6 +192,26 @@ img {
 .about__item-icon {
   position: absolute;
   right: 5px;
+}
+
+.about__languages-card {
+  background-color: #f7f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin: 12px 0;
+}
+
+.about__languages-images {
+  display: block;
+  width: 48px;
+  margin-right: 12px;
 }
 
 /* Utility Class */
@@ -252,6 +274,10 @@ img {
 
 .no-border {
   border: none;
+}
+
+.active {
+  padding-top: 20px;
 }
 
 /* Breakpoint syles */

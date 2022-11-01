@@ -238,17 +238,50 @@ img {
 }
 
 .contact {
+  display: flex;
+  justify-content: center;
   background-color: #6070ff;
   color: white;
   border-radius: 75px 0 0 0;
+  align-items: center;
 }
 
-.contact__email, .contact__name, .contact__text {
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.contact__email,
+.contact__name,
+.contact__text {
   width: 100%;
   margin-top: 20px;
   padding: 15px 16px;
   border-radius: 8px;
   border: 1px solid #cfd8dc;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.contact__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #b3bac5;
+}
+
+.bottom_line {
+  width: 134px;
+  border-bottom: 5px solid #0d151e;
+  margin-top: 32px;
+  align-self: center;
 }
 
 .cta-primary {

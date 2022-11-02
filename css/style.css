@@ -83,7 +83,8 @@ img {
 .hero {
   padding-top: 100px;
   height: 90vh;
-  background: url("../asset/images/svg-1.png") 0 50px no-repeat,
+  background: 
+    url("../asset/images/svg-1.png") 0 50px no-repeat,
     url("../asset/images/svg-2.png") 0 65px no-repeat,
     url("../asset/images/svg-3.png") 145px 85px no-repeat,
     url("../asset/images/svg-4.png") 145px 75px no-repeat,
@@ -247,13 +248,14 @@ img {
 .contact {
   display: flex;
   justify-content: center;
-  /* background-color: #6070ff; */
   color: white;
   border-radius: 75px 0 0 0;
   align-items: center;
-  background: url("../asset/images/svg-14.png") right 45px no-repeat,
+  background: 
+    url("../asset/images/svg-14.png") right 45px no-repeat,
     url("../asset/images/svg-13.png") right 25px no-repeat,
-    url("../asset/images/svg-12.png") 170px 50px no-repeat, #6070ff;
+    url("../asset/images/svg-12.png") 170px 50px no-repeat,
+  #6070ff;
 }
 
 .contact__container {

@@ -46,7 +46,7 @@
     <section class="hero">
       <div class="container hero__container">
         <h1 class="hero__headline">
-          <span class="hero__headline--main headline-text">I'm Kola Kolade</span
+          <span class="hero__headline--main headline-text">I'm Kola</span
           ><br /><span class="hero__headline--sub">Glad to see you</span>
         </h1>
         <p class="hero__description">
@@ -205,7 +205,7 @@
         </article>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container about__container">
         <h1 class="about__headline headline-text">About <br />Myself</h1>
         <p class="about__text-content description-text">
@@ -294,6 +294,53 @@
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="container contact__container">
+        <h1 class="contact__headline headline-text">Contact Me</h1>
+        <p class="contact__description">
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it
+        </p>
+        <form action="https://formspree.io/f/mlevoljp" method="post" class="contact__form">
+          <input
+            type="text"
+            name="contact__name"
+            id="contact__name"
+            class="contact__name"
+            placeholder="Yeremias"
+            maxlength="30"
+            required
+          />
+          <input
+            type="email"
+            name="contact__email"
+            id="contact__email"
+            class="contact__email"
+            placeholder="natajayanj14@gmail.com"
+            required
+          />
+          <textarea
+            name="contact__text"
+            id="contact__text"
+            cols="30"
+            rows="10"
+            class="contact__text"
+            placeholder="Write your message here"
+            maxlength="500"
+            required
+          ></textarea>
+          <input
+            type="submit"
+            value="Get in Touch"
+            class="contact__cta btn-primary"
+
+          />
+         
+        </form>
+        <div class="bottom_line"></div>
       </div>
     </section>
   </body>

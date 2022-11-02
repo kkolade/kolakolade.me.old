@@ -174,11 +174,10 @@ section.work {
 }
 
 .work__card-technology-item {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
   padding: 4px 12px;
   border-radius: 8px;
 }
-
 
 .about__container {
   display: flex;

@@ -101,7 +101,11 @@ img {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  margin: 100px 0;
+}
+
+section.hero,
+section.work {
+  padding-bottom: 100px;
 }
 
 /* Work Section */
@@ -170,17 +174,17 @@ img {
 }
 
 .work__card-technology-item {
-  background-color: #ebebff;
+  background-color: #E5E5E5;
   padding: 4px 12px;
   border-radius: 8px;
 }
 
-/* Container */
 
 .about__container {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding-bottom: 120px;
 }
 
 .about__skills {
@@ -223,9 +227,10 @@ img {
 }
 
 /* Utility Class */
+
 .container {
   width: 90%;
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 }
 
 .row {
@@ -251,6 +256,8 @@ img {
   border-radius: 75px 0 0 0;
   align-items: center;
   background:
+    url("../asset/images/svg-16.png") 78% 93% no-repeat,
+    url("../asset/images/svg-15.png") 85% 92% no-repeat,
     url("../asset/images/svg-14.png") right 45px no-repeat,
     url("../asset/images/svg-13.png") right 25px no-repeat,
     url("../asset/images/svg-12.png") 170px 50px no-repeat,
@@ -335,6 +342,7 @@ img {
 }
 
 /* Items to hide until javascript */
+
 .hidden {
   visibility: hidden;
 }

@@ -399,10 +399,13 @@ section.work {
   margin-top: 380px;
 }
 
-.work__container {
-  grid-template-rows: auto auto;
-  row-gap: 110px;
- 
+.work__card {
+  flex-direction: row;
+  gap: 5%;
+}
+
+.card-item {
+  flex-basis: 50%;
 }
 
   .container {

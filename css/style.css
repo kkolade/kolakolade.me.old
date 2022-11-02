@@ -46,8 +46,10 @@ img {
 /* Header Section */
 
 .main-header__container {
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .brand {
@@ -232,11 +234,6 @@ section.work {
   margin: 100px auto 0 auto;
 }
 
-.row {
-  width: 90%;
-  margin: 0 auto;
-}
-
 .headline-text {
   font-weight: 700;
   font-size: 40px;
@@ -356,15 +353,62 @@ section.work {
 
 /* Breakpoint syles */
 
-/* @media (min-width: 480px) {
-} */
-
 @media (min-width: 680px) {
+  .main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+  }
+
+  .main-header__container {
+    width: 80%;
+
+  }
+
+  .main-nav__hamburger {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: 32px;
+    padding-top: 10px;
+  }
+
   .hero {
     height: 90vh;
-    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
+    background:
+    url("../asset/images/h-svg-10.png") 78% 93% no-repeat,
+    url("../asset/images/h-svg-9.png") 78% 93% no-repeat,
+    url("../asset/images/h-svg-8.png") 78% 93% no-repeat,
+    url("../asset/images/h-svg-7.png") 78% 93% no-repeat,
+    url("../asset/images/h-svg-6.png") 97% 240px no-repeat,
+    url("../asset/images/h-svg-5.png") 90% 160px no-repeat,
+    url("../asset/images/h-svg-4.png") 50% 235px no-repeat,
+    url("../asset/images/h-svg-3.png") 50% 200px no-repeat,
+    url("../asset/images/h-svg-2.png") 90px 160px no-repeat,
+    url("../asset/images/h-svg-1.png") 34px 120px no-repeat;
+  }
+
+  .container.hero__container {
+    padding: 120px 0;
+  }
+
+.hero__headline {
+  margin-top: 380px;
+}
+
+.work__container {
+  grid-template-rows: auto auto;
+  row-gap: 110px;
+ 
+}
+
+  .container {
+    width: 80%;
+    /* margin: 100px auto 0 auto; */
   }
 }
 
-/* @media (min-width: 1024px) {
-} */
+

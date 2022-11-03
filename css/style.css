@@ -241,9 +241,8 @@ section.work {
   color: white;
   border-radius: 75px 0 0 0;
   align-items: center;
-  background:
-    url("../asset/images/contact-bg-mobile.png") center center / cover
-    no-repeat,
+  background: url("../asset/images/contact-bg-mobile.png") center center / cover
+      no-repeat,
     #6070ff;
   padding: 80px 0 0 0;
 }
@@ -384,6 +383,15 @@ section.work {
 
   .work__card--reversed {
     flex-direction: row-reverse;
+  }
+
+  .work__card-image {
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+
+  .work__card-image:hover {
+    transform: scale(1.03);
   }
 
   .card-item {

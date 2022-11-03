@@ -90,6 +90,50 @@ img {
   gap: 18px;
 }
 
+.hero__headline--main {
+  animation-name: slide_right;
+  animation-duration: 1s;
+}
+
+@keyframes slide_right {
+  0% {
+    position: relative;
+    left: -400px;
+  }
+
+  75% {
+    position: relative;
+    left: 40px;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+.hero__headline--sub {
+  animation-name: slide_left;
+  animation-duration: 1s;
+}
+
+@keyframes slide_left {
+  0% {
+    position: relative;
+    right: -400px;
+  }
+
+  75% {
+    position: relative;
+    right: 40px;
+  }
+
+  100% {
+    position: relative;
+    right: 0;
+  }
+}
+
 section.hero,
 section.work {
   padding-bottom: 100px;

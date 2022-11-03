@@ -21,13 +21,6 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-}
-
 ul {
   list-style: none;
 }
@@ -46,8 +39,10 @@ img {
 /* Header Section */
 
 .main-header__container {
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .brand {
@@ -81,16 +76,8 @@ img {
 
 .hero {
   padding-top: 100px;
-  height: 90vh;
-  background:
-    url("../asset/images/svg-1.png") 0 50px no-repeat,
-    url("../asset/images/svg-2.png") 0 65px no-repeat,
-    url("../asset/images/svg-3.png") 145px 85px no-repeat,
-    url("../asset/images/svg-4.png") 145px 75px no-repeat,
-    url("../asset/images/svg-5.png") right 65px no-repeat,
-    url("../asset/images/svg-6.png") right 95px no-repeat,
-    url("../asset/images/svg-7.png") 90% 395px no-repeat,
-    url("../asset/images/svg-11.png") 90% 400px no-repeat;
+  height: 100vh;
+  background: url("../asset/images/header-bg-mobile.png") center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,11 +166,16 @@ section.work {
   border-radius: 8px;
 }
 
-.about__container {
+.about__container,
+.about__bio,
+.about__specialisation {
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding-bottom: 120px;
+}
+
+.about__container {
+  padding: 120px 0;
 }
 
 .about__skills {
@@ -229,11 +221,6 @@ section.work {
 
 .container {
   width: 90%;
-  margin: 100px auto 0 auto;
-}
-
-.row {
-  width: 90%;
   margin: 0 auto;
 }
 
@@ -255,12 +242,10 @@ section.work {
   border-radius: 75px 0 0 0;
   align-items: center;
   background:
-    url("../asset/images/svg-16.png") 78% 93% no-repeat,
-    url("../asset/images/svg-15.png") 85% 92% no-repeat,
-    url("../asset/images/svg-14.png") right 45px no-repeat,
-    url("../asset/images/svg-13.png") right 25px no-repeat,
-    url("../asset/images/svg-12.png") 170px 50px no-repeat,
+    url("../asset/images/contact-bg-mobile.png") center center / cover
+    no-repeat,
     #6070ff;
+  padding: 80px 0 0 0;
 }
 
 .contact__container {
@@ -356,15 +341,103 @@ section.work {
 
 /* Breakpoint syles */
 
-/* @media (min-width: 480px) {
-} */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
 
-@media (min-width: 680px) {
+  .main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+  }
+
+  .main-header__container {
+    width: 80%;
+  }
+
+  .main-nav__hamburger {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: 32px;
+    padding-top: 10px;
+  }
+
   .hero {
-    height: 90vh;
-    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
+    height: 700px;
+    background: url("../asset/images/header-bg.png") no-repeat;
+  }
+
+  .hero__container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .work__card {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  .work__card--reversed {
+    flex-direction: row-reverse;
+  }
+
+  .card-item {
+    flex-basis: 50%;
+  }
+
+  .work__card-text-content {
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+
+  .about__container {
+    flex-direction: row;
+  }
+
+  .about__bio,
+  .about__specialisation {
+    flex-basis: 50%;
+  }
+
+  .about__categories__sub.active {
+    display: flex;
+    gap: 12px;
+  }
+
+  .about__languages-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 122px;
+    height: 120px;
+  }
+
+  .contact {
+    background: url("../asset/images/contact-bg.png") no-repeat, #6070ff;
+  }
+
+  .contact__container {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .contact__form {
+    text-align: center;
+  }
+
+  .bottom_line {
+    display: none;
+  }
+
+  section.contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
-
-/* @media (min-width: 1024px) {
-} */

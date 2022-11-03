@@ -21,13 +21,6 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-}
-
 ul {
   list-style: none;
 }
@@ -84,15 +77,7 @@ img {
 .hero {
   padding-top: 100px;
   height: 100vh;
-  background:
-    url("../asset/images/svg-1.png") 0 50px no-repeat,
-    url("../asset/images/svg-2.png") 0 65px no-repeat,
-    url("../asset/images/svg-3.png") 145px 85px no-repeat,
-    url("../asset/images/svg-4.png") 145px 75px no-repeat,
-    url("../asset/images/svg-5.png") right 65px no-repeat,
-    url("../asset/images/svg-6.png") right 95px no-repeat,
-    url("../asset/images/svg-7.png") 90% 395px no-repeat,
-    url("../asset/images/svg-11.png") 90% 400px no-repeat;
+  background: url("../asset/images/header-bg-mobile.png") center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -256,13 +241,10 @@ section.work {
   color: white;
   border-radius: 75px 0 0 0;
   align-items: center;
-  background:
-    url("../asset/images/svg-16.png") 78% 93% no-repeat,
-    url("../asset/images/svg-15.png") 85% 92% no-repeat,
-    url("../asset/images/svg-14.png") right 45px no-repeat,
-    url("../asset/images/svg-13.png") right 25px no-repeat,
-    url("../asset/images/svg-12.png") 170px 50px no-repeat,
+  background: url("../asset/images/contact-bg-mobile.png") center center / cover
+      no-repeat,
     #6070ff;
+  padding: 80px 0 0 0;
 }
 
 .contact__container {
@@ -358,7 +340,7 @@ section.work {
 
 /* Breakpoint syles */
 
-@media (min-width: 680px) {
+@media (min-width: 768px) {
   .container {
     width: 80%;
   }
@@ -386,17 +368,7 @@ section.work {
 
   .hero {
     height: 700px;
-    background:
-      url("../asset/images/h-svg-10.png") 78% 93% no-repeat,
-      url("../asset/images/h-svg-9.png") 78% 93% no-repeat,
-      url("../asset/images/h-svg-8.png") 78% 93% no-repeat,
-      url("../asset/images/h-svg-7.png") 78% 93% no-repeat,
-      url("../asset/images/h-svg-6.png") 97% 240px no-repeat,
-      url("../asset/images/h-svg-5.png") 90% 160px no-repeat,
-      url("../asset/images/h-svg-4.png") 50% 235px no-repeat,
-      url("../asset/images/h-svg-3.png") 50% 200px no-repeat,
-      url("../asset/images/h-svg-2.png") 90px 160px no-repeat,
-      url("../asset/images/h-svg-1.png") 34px 120px no-repeat;
+    background: url("../asset/images/header-bg.png") no-repeat;
   }
 
   .hero__container {
@@ -407,6 +379,10 @@ section.work {
   .work__card {
     flex-direction: row;
     gap: 5%;
+  }
+
+  .work__card--reversed {
+    flex-direction: row-reverse;
   }
 
   .card-item {
@@ -438,6 +414,10 @@ section.work {
     align-items: start;
     width: 122px;
     height: 120px;
+  }
+
+  .contact {
+    background: url("../asset/images/contact-bg.png") no-repeat, #6070ff;
   }
 
   .contact__container {

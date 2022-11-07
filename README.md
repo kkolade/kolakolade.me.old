@@ -13,7 +13,7 @@ I have honed the soft skills required to work with a remote team or remotely to 
 
 ## Visit my website
 
-[kolakolade.me](#)
+[kolakolade.me](https://kkolade.github.io/)
 
 ## Getting Started
 

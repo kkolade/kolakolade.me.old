@@ -21,7 +21,7 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="row main-header__container">
+      <div class="main-header__container">
         <a href="#" class="brand">KolaKolade</a>
         <nav class="main-nav">
           <nav class="main-nav__hamburger">
@@ -46,7 +46,7 @@
     <section class="hero">
       <div class="container hero__container">
         <h1 class="hero__headline">
-          <span class="hero__headline--main headline-text">I'm Kola Kolade</span
+          <span class="hero__headline--main headline-text">I'm Kola</span
           ><br /><span class="hero__headline--sub">Glad to see you</span>
         </h1>
         <p class="hero__description">
@@ -91,9 +91,9 @@
           <img
             src="asset/images/portfolio-1.jpg"
             alt="portfolio project 1"
-            class="work__card-image"
+            class="work__card-image card-item"
           />
-          <div class="work__card-text-content">
+          <div class="work__card-text-content card-item">
             <h2 class="work__card-title">Tonic</h2>
             <div class="work__card-info">
               <p class="work__card-project-titlet--callout">Canopy</p>
@@ -116,13 +116,13 @@
             <a href="" class="work__cta btn-primary">See Project</a>
           </div>
         </article>
-        <article class="work__card">
+        <article class="work__card work__card--reversed">
           <img
             src="asset/images/portfolio-2.jpg"
             alt="portfolio project 2"
-            class="work__card-image"
+            class="work__card-image card-item"
           />
-          <div class="work__card-text-content">
+          <div class="work__card-text-content card-item">
             <h2 class="work__card-title">Multi-Post<br />Stories</h2>
             <div class="work__card-info">
               <p class="work__card-project-titlet--callout">Canopy</p>
@@ -149,9 +149,9 @@
           <img
             src="asset/images/portfolio-3.jpg"
             alt="portfolio project 3"
-            class="work__card-image"
+            class="work__card-image card-item"
           />
-          <div class="work__card-text-content">
+          <div class="work__card-text-content card-item">
             <h2 class="work__card-title">Tonic</h2>
             <div class="work__card-info">
               <p class="work__card-project-titlet--callout">Canopy</p>
@@ -174,13 +174,13 @@
             <a href="" class="work__cta btn-primary">See Project</a>
           </div>
         </article>
-        <article class="work__card">
+        <article class="work__card work__card--reversed">
           <img
             src="asset/images/portfolio-4.jpg"
             alt="portfolio project 4"
-            class="work__card-image"
+            class="work__card-image card-item"
           />
-          <div class="work__card-text-content">
+          <div class="work__card-text-content card-item">
             <h2 class="work__card-title">Multi-Post<br />Stories</h2>
             <div class="work__card-info">
               <p class="work__card-project-titlet--callout">Canopy</p>
@@ -205,95 +205,139 @@
         </article>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="container about__container">
-        <h1 class="about__headline headline-text">About <br />Myself</h1>
-        <p class="about__text-content description-text">
-          Hello I’m a software developer! I can help you build a product ,
-          feature or website Look through some of my work and experience! If you
-          like what you see and have a project you need coded, don’t hestiate to
-          contact me.
-        </p>
-        <a href="" class="about__cta-connect cta-primary">Let's Connect</a>
-        <div class="about__social-link">
-          <img
-            src="asset/images/twitter.png"
-            alt="twitter logo"
-            class="hero__social-link-image social-links"
-          />
-          <img
-            src="asset/images/Linkedin icon.png"
-            alt="linked-n logo"
-            class="hero__social-link-image social-links"
-          />
-          <img
-            src="asset/images/medium.png"
-            alt="medium logo"
-            class="hero__social-link-image social-links"
-          />
-          <img
-            src="asset/images/github.png"
-            alt="github logo"
-            class="hero__social-link-image social-links"
-          />
-          <img
-            src="asset/images/angellist.png"
-            alt="angellist logo"
-            class="hero__social-link-image social-links"
-          />
+        <div class="about__bio">
+          <h1 class="about__headline headline-text">About <br />Myself</h1>
+          <p class="about__text-content description-text">
+            Hello I’m a software developer! I can help you build a product ,
+            feature or website Look through some of my work and experience! If you
+            like what you see and have a project you need coded, don’t hestiate to
+            contact me.
+          </p>
+          <a href="" class="about__cta-connect cta-primary">Let's Connect</a>
+          <div class="about__social-link">
+            <img
+              src="asset/images/twitter.png"
+              alt="twitter logo"
+              class="hero__social-link-image social-links"
+            />
+            <img
+              src="asset/images/Linkedin icon.png"
+              alt="linked-n logo"
+              class="hero__social-link-image social-links"
+            />
+            <img
+              src="asset/images/medium.png"
+              alt="medium logo"
+              class="hero__social-link-image social-links"
+            />
+            <img
+              src="asset/images/github.png"
+              alt="github logo"
+              class="hero__social-link-image social-links"
+            />
+            <img
+              src="asset/images/angellist.png"
+              alt="angellist logo"
+              class="hero__social-link-image social-links"
+            />
+          </div>
+          <a href="" class="about__cta-resume btn-primary">Get my resume</a>
         </div>
-        <a href="" class="about__cta-resume btn-primary">Get my resume</a>
-        <div class="about__skills">
-          <ul class="about__categories">
-            <li class="about__item">
+        <div class="about__specialisation">
+          <div class="about__skills">
+            <ul class="about__categories">
+              <li class="about__item">
               Languages
-              <i class="fa-sharp fa-solid fa-angle-right about__item-icon hidden"></i>
-              <i class="fa-sharp fa-solid fa-angle-down about__item-icon"></i>
-              <ul class="about__categories__sub active">
-                <li class="about__categories__sub-item">
-                 <div class="about__languages-card">
-                  <img src="asset/images/js.jpg" alt="javascript logo" class="about__languages-images">
-                  <p class="about__language-text">javascript</p>
-                 </div>
-                </li>
-                <li class="about__categories__sub-item">
+                <i class="fa-sharp fa-solid fa-angle-right about__item-icon hidden"></i>
+                <i class="fa-sharp fa-solid fa-angle-down about__item-icon"></i>
+                <ul class="about__categories__sub active">
+                  <li class="about__categories__sub-item">
+                    <div class="about__languages-card">
+                      <img src="asset/images/js.jpg" alt="javascript logo" class="about__languages-images">
+                      <p class="about__language-text">javascript</p>
+                     </div>
+                  </li>
                   <li class="about__categories__sub-item">
                     <div class="about__languages-card">
                       <img src="asset/images/html.jpg" alt="html logo" class="about__languages-images">
                       <p class="about__language-text">html</p>
-                     </div>
+                   </div>
                   </li>
-                </li>
-                <li class="about__categories__sub-item">
                   <li class="about__categories__sub-item">
                     <div class="about__languages-card">
                       <img src="asset/images/css.jpg" alt="css logo" class="about__languages-images">
                       <p class="about__language-text">css</p>
-                     </div>
+                    </div>
                   </li>
-                </li>
-              </ul>
-            </li>
-            <li class="about__item">
+                </ul>
+              </li>
+              <li class="about__item">
               Frameworks
-              <i class="fa-sharp fa-solid fa-angle-right about__item-icon"></i>
-              <ul class="about__categories__sub">
-                <li class="about__categories__sub-item"></li>
-                <li class="about__categories__sub-item"></li>
-                <li class="about__categories__sub-item"></li>
-              </ul>
-            </li>
-            <li class="about__item">
-              Skills
-              <i class="fa-sharp fa-solid fa-angle-right about__item-icon"></i>
-              <ul class="about__categories__sub">
-                <li class="about__categories__sub-item"></li>
-                <li class="about__categories__sub-item"></li>
-                <li class="about__categories__sub-item"></li>
-              </ul>
-            </li>
-          </ul>
+                <i class="fa-sharp fa-solid fa-angle-right about__item-icon"></i>
+                <ul class="about__categories__sub">
+                  <li class="about__categories__sub-item"></li>
+                  <li class="about__categories__sub-item"></li>
+                  <li class="about__categories__sub-item"></li>
+                </ul>
+              </li>
+              <li class="about__item">
+                Skills
+                <i class="fa-sharp fa-solid fa-angle-right about__item-icon"></i>
+                <ul class="about__categories__sub">
+                  <li class="about__categories__sub-item"></li>
+                  <li class="about__categories__sub-item"></li>
+                  <li class="about__categories__sub-item"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
+    </section>
+    <section class="contact">
+      <div class="container contact__container">
+        <h1 class="contact__headline headline-text">Contact Me</h1>
+        <p class="contact__description">
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it
+        </p>
+        <form action="https://formspree.io/f/mlevoljp" method="post" class="contact__form">
+          <input
+            type="text"
+            name="contact__name"
+            id="contact__name"
+            class="contact__name"
+            placeholder="Yeremias"
+            maxlength="30"
+            required
+          />
+          <input
+            type="email"
+            name="contact__email"
+            id="contact__email"
+            class="contact__email"
+            placeholder="natajayanj14@gmail.com"
+            required
+          />
+          <textarea
+            name="contact__text"
+            id="contact__text"
+            cols="30"
+            rows="10"
+            class="contact__text"
+            maxlength="500"
+            required
+          >Write your message here</textarea>
+          <input
+            type="submit"
+            value="Get in Touch"
+            class="contact__cta btn-primary"
+          />
+         
+        </form>
+        <div class="bottom_line"></div>
       </div>
     </section>
   </body>

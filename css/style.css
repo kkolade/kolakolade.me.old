@@ -21,13 +21,6 @@ body {
   margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-}
-
 ul {
   list-style: none;
 }
@@ -46,8 +39,10 @@ img {
 /* Header Section */
 
 .main-header__container {
+  width: 90%;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 
 .brand {
@@ -74,18 +69,15 @@ img {
 }
 
 .main-nav__list {
-  /* display: flex; */
   display: none;
 }
 
 /* Hero Section */
 
 .hero {
-  height: 90vh;
-  background-image: url("../asset/images/header-bg-mobile.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 100px;
+  height: 100vh;
+  background: url("../asset/images/header-bg-mobile.png") center center / cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,6 +90,11 @@ img {
   gap: 18px;
 }
 
+section.hero,
+section.work {
+  padding-bottom: 100px;
+}
+
 /* Work Section */
 
 .work {
@@ -108,6 +105,7 @@ img {
   display: grid;
   grid-template-rows: auto auto auto auto;
   row-gap: 110px;
+  padding-top: 120px;
 }
 
 .work__card {
@@ -163,16 +161,21 @@ img {
 }
 
 .work__card-technology-item {
-  background-color: #ebebff;
+  background-color: #e5e5e5;
   padding: 4px 12px;
   border-radius: 8px;
 }
 
-/* Container */
-.about__container {
+.about__container,
+.about__bio,
+.about__specialisation {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.about__container {
+  padding: 120px 0;
 }
 
 .about__skills {
@@ -215,13 +218,8 @@ img {
 }
 
 /* Utility Class */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 120px 0;
-}
 
-.row {
+.container {
   width: 90%;
   margin: 0 auto;
 }
@@ -235,6 +233,56 @@ img {
 .social-links {
   display: inline-block;
   padding-right: 20px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  color: white;
+  border-radius: 75px 0 0 0;
+  align-items: center;
+  background:
+    url("../asset/images/contact-bg-mobile.png") center center / cover
+    no-repeat,
+    #6070ff;
+  padding: 80px 0 0 0;
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.contact__email,
+.contact__name,
+.contact__text {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px 16px;
+  border-radius: 8px;
+  border: 1px solid #cfd8dc;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.contact__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: inherit;
+  color: #b3bac5;
+}
+
+.bottom_line {
+  width: 134px;
+  border-bottom: 5px solid #0d151e;
+  margin-top: 32px;
+  align-self: center;
 }
 
 .cta-primary {
@@ -253,12 +301,22 @@ img {
   border-radius: 8px;
   padding: 20px 12px;
   width: fit-content;
+  background-color: white;
 }
 
 .btn-primary:hover {
   color: #fff;
   background-color: #396df2;
   box-shadow: 0 5px 5px rgba(57, 109, 242, 0.2);
+}
+
+.btn-primary:active {
+  color: #fff;
+  background: #2230d2;
+}
+
+.contact__cta {
+  margin-top: 20px;
 }
 
 .description-text {
@@ -268,6 +326,7 @@ img {
 }
 
 /* Items to hide until javascript */
+
 .hidden {
   visibility: hidden;
 }
@@ -282,15 +341,103 @@ img {
 
 /* Breakpoint syles */
 
-/* @media (min-width: 480px) {
-} */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
 
-@media (min-width: 680px) {
+  .main-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+  }
+
+  .main-header__container {
+    width: 80%;
+  }
+
+  .main-nav__hamburger {
+    display: none;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: 32px;
+    padding-top: 10px;
+  }
+
   .hero {
-    height: 90vh;
-    background: url("../asset/images/header-bg.jpg") center / cover no-repeat;
+    height: 700px;
+    background: url("../asset/images/header-bg.png") no-repeat;
+  }
+
+  .hero__container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .work__card {
+    flex-direction: row;
+    gap: 5%;
+  }
+
+  .work__card--reversed {
+    flex-direction: row-reverse;
+  }
+
+  .card-item {
+    flex-basis: 50%;
+  }
+
+  .work__card-text-content {
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+
+  .about__container {
+    flex-direction: row;
+  }
+
+  .about__bio,
+  .about__specialisation {
+    flex-basis: 50%;
+  }
+
+  .about__categories__sub.active {
+    display: flex;
+    gap: 12px;
+  }
+
+  .about__languages-card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 122px;
+    height: 120px;
+  }
+
+  .contact {
+    background: url("../asset/images/contact-bg.png") no-repeat, #6070ff;
+  }
+
+  .contact__container {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .contact__form {
+    text-align: center;
+  }
+
+  .bottom_line {
+    display: none;
+  }
+
+  section.contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 }
-
-/* @media (min-width: 1024px) {
-} */

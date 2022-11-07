@@ -17,7 +17,7 @@ I have honed the soft skills required to work with a remote team or remotely to 
 
 ## Getting Started
 
-Visit my portfolio at [kolakolade.me](#)
+Visit my portfolio at [kolakolade.me](https://kkolade.github.io/)
 To get a local copy up and running, you can either download a zipped file or clone this repo.
 
 ### Prerequisite

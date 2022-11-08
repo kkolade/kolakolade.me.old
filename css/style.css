@@ -201,7 +201,7 @@ section.work {
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 3%;
-  color: #6070ff;
+  color: #293eff;
 }
 
 .work__card-technology-item {
@@ -319,7 +319,7 @@ section.work {
   font-size: 15px;
   line-height: 24px;
   font-family: inherit;
-  color: #b3bac5;
+  color: #282a2c;
 }
 
 .bottom_line {
@@ -332,7 +332,7 @@ section.work {
 .cta-primary {
   font-weight: 500;
   text-transform: uppercase;
-  color: #7f8cff;
+  color: #5663db;
 }
 
 .btn-primary {

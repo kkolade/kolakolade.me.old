@@ -61,11 +61,18 @@ img {
   display: flex;
 }
 
-.main-nav__hamburger {
+.main-nav__toggle-icons {
   justify-content: center;
   align-items: center;
   display: flex;
   cursor: pointer;
+}
+
+.on-top {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  z-index: 1100;
 }
 
 .main-nav__list.show-element {

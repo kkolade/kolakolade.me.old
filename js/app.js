@@ -24,24 +24,23 @@ toggleIcons.addEventListener("click", (e) => {
   }
 });
 
-
 const data = [
   {
     id: 1,
-    name: 'TONIC',
-    companies: ['CANOPY',  'Back end Dev',  2015],
-    img: 'asset/images/twitter.png',
-    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
-    technologies: ['html', 'css', 'javaScript']
+    name: "TONIC",
+    companies: ["CANOPY", "Back end Dev", 2015],
+    img: "asset/images/twitter.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    technologies: ["html", "css", "javaScript"],
   },
 
   {
     id: 2,
-    name:'TONIC',
-    companies: ['CANOPY',  'Back end Dev',  2015],
-    img: 'asset/images/twitter.png',
-    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
-    technologies: ['html', 'css', 'javaScript']
+    name: "TONIC",
+    companies: ["CANOPY", "Back end Dev", 2015],
+    img: "asset/images/twitter.png",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the",
+    technologies: ["html", "css", "javaScript"],
   },
 ];
 
@@ -49,36 +48,60 @@ const data = [
 const work = document.querySelector("#work");
 
 document.addEventListener("DOMContentLoaded", () => {
-  // create the head
+  // create elements of the card and added all relevant attributed and children
   const containerDiv = document.createElement("div");
-  containerDiv.classList.add('work__card');
-  const headDiv = document.createElement("div");
+  containerDiv.className = "container work__container";
 
-  const bodyDiv = document.createElement("div");
-  const headline = document.createElement("h3");
-  headline.classList.add('work__card-title');
-  // const closeButton = document.createElement("");
-  const list = document.createElement("ul");
-  list.classList.add('work__card-technology-list');
-  const headImage = document.createElement("img");
+  const cardContainer = document.createElement("div");
+  cardContainer.className = "work_card";
 
-  containerDiv.classList.add("work__project");
-  containerDiv.appendChild(headDiv);
-  headDiv.appendChild(headline);
-  // headDiv.appendChild('closeButton')
-  headDiv.appendChild(list);
+  const cardImage = document.createElement("img");
+  cardImage.className = "work__card-image card-item";
 
-  containerDiv.appendChild(bodyDiv);
-  console.log(containerDiv);
+  const cardHeadDiv = document.createElement("div");
+  const cardTitle = document.createElement("div");
+  cardTitle.className = "work__card-title";
+
+  const projectDetail = document.createElement("div");
+
+  const closeButton = document.createElement("i");
+  closeButton.className = "fa-solid fa-times";
+
+  cardHeadDiv.appendChild(cardTitle);
+  cardHeadDiv.appendChild(projectDetail);
+  cardHeadDiv.appendChild(closeButton);
+
+  const cardBodyDiv = document.createElement("div");
+  const cardDescription = document.createElement("p");
+  cardDescription.className = "work__card-description description-text";
+
+  const badgeContainer = document.createElement("div");
+
+  const buttonContainer = document.createElement("div");
+  const seeProject = document.createElement("button");
+  const seeRepo = document.createElement("button");
+
+  buttonContainer.appendChild(seeProject);
+  buttonContainer.appendChild(seeRepo);
+
+  cardBodyDiv.appendChild(cardDescription);
+  cardBodyDiv.appendChild(badgeContainer);
+  cardBodyDiv.appendChild(buttonContainer);
+
+  cardContainer.appendChild(cardImage);
+  cardContainer.appendChild(cardHeadDiv);
+  cardContainer.appendChild(cardBodyDiv);
+
+  containerDiv.appendChild(cardContainer);
+
   work.appendChild(containerDiv);
-
-  
-for(let i = 0; i < 5; i++) {
-  const listItems = document.createElement('li');
-  
-  listItems.innerText = data[0].companies[i];
-  listItems.classList.add('work__card-technology-item');
-  list.appendChild(listItems);
-}
-headline.innerText = data[0].name;
 });
+//   for (let i = 0; i < 5; i++) {
+//     const listItems = document.createElement("li");
+
+//     listItems.innerText = data[0].companies[i];
+//     listItems.classList.add("work__card-technology-item");
+//     list.appendChild(listItems);
+//   }
+//   headline.innerText = data[0].name;
+// });

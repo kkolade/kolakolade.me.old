@@ -1,3 +1,4 @@
+/* reset */
 :root {
   font-size: 16px;
   box-sizing: border-box;
@@ -48,6 +49,7 @@ img {
 
 .main-header_toggle {
   width: 100%;
+  padding: 0 20px;
 }
 
 .brand {
@@ -61,12 +63,10 @@ img {
 
 .main-nav__hamburger {
   justify-content: center;
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
   cursor: pointer;
 }
-
 
 .main-nav__list.show-element {
   display: flex;
@@ -78,7 +78,7 @@ img {
   width: 100%;
   height: 100vh;
   z-index: 99;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -90,12 +90,16 @@ img {
   padding-top: 106px;
 }
 
-.main-nav__list.show-element .main-nav__list-item {
-  padding-top: 40px;
+.main-nav__list-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.main-nav__list.show-element .main-nav__list-item a{
+.main-nav__list-item a {
   color: #fff;
+}
+.main-nav__list-item a:hover {
+  color: #ffffff;
 }
 
 .hide-element {

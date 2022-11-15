@@ -97,16 +97,12 @@ img {
   padding-top: 106px;
 }
 
-.main-nav__list-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.main-nav__list.show-element .main-nav__list-item {
+  padding-top: 40px;
 }
 
-.main-nav__list-item a {
+.main-nav__list.show-element .main-nav__list-item a {
   color: #fff;
-}
-.main-nav__list-item a:hover {
-  color: #ffffff;
 }
 
 .hide-element {

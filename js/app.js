@@ -24,23 +24,42 @@ toggleIcons.addEventListener("click", (e) => {
   }
 });
 
+
+const data = [
+  {
+    id: 1,
+    name: 'TONIC',
+    companies: ['CANOPY',  'Back end Dev',  2015],
+    img: 'asset/images/twitter.png',
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
+    technologies: ['html', 'css', 'javaScript']
+  },
+
+  {
+    id: 2,
+    name:'TONIC',
+    companies: ['CANOPY',  'Back end Dev',  2015],
+    img: 'asset/images/twitter.png',
+    desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the',
+    technologies: ['html', 'css', 'javaScript']
+  },
+];
+
 // WORK SECTION
 const work = document.querySelector("#work");
 
 document.addEventListener("DOMContentLoaded", () => {
   // create the head
   const containerDiv = document.createElement("div");
+  containerDiv.classList.add('work__card');
   const headDiv = document.createElement("div");
+
   const bodyDiv = document.createElement("div");
   const headline = document.createElement("h3");
+  headline.classList.add('work__card-title');
   // const closeButton = document.createElement("");
   const list = document.createElement("ul");
-  const ListItem1 = document.createElement("li");
-  const ListItem2 = document.createElement("li");
-  const ListItem3 = document.createElement("li");
-  const ListItem4 = document.createElement("li");
-  const ListItem5 = document.createElement("li");
-  const headImageDiv = document.createElement("div");
+  list.classList.add('work__card-technology-list');
   const headImage = document.createElement("img");
 
   containerDiv.classList.add("work__project");
@@ -48,12 +67,18 @@ document.addEventListener("DOMContentLoaded", () => {
   headDiv.appendChild(headline);
   // headDiv.appendChild('closeButton')
   headDiv.appendChild(list);
-  list.appendChild(ListItem1);
-  list.appendChild(ListItem2);
-  list.appendChild(ListItem3);
-  list.appendChild(ListItem4);
-  list.appendChild(ListItem5);
+
   containerDiv.appendChild(bodyDiv);
   console.log(containerDiv);
   work.appendChild(containerDiv);
+
+  
+for(let i = 0; i < 5; i++) {
+  const listItems = document.createElement('li');
+  
+  listItems.innerText = data[0].companies[i];
+  listItems.classList.add('work__card-technology-item');
+  list.appendChild(listItems);
+}
+headline.innerText = data[0].name;
 });

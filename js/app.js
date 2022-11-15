@@ -17,6 +17,7 @@ toggleIcons.addEventListener("click", (e) => {
   } else if (e.target.classList.contains("fa-times")) {
     iconBars.classList.toggle("hide-element");
     iconTimes.classList.toggle("hide-element");
+    iconTimes.classList.toggle("on-top");
     menuList.classList.toggle("show-element");
     mainHeader.classList.add("main-header_toggle");
   }

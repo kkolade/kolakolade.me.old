@@ -94,6 +94,8 @@ const buildProjectCard = (project) => {
 
   // Add content and attributes to the created elements
   containerDiv.className = "container work__container";
+  showcase.className = "work__showcase";
+  thumbnailContainer.className = "work__thumbnail";
   cardContainer.className = "work__card";
   projectDetail.className = "work__card-info";
   projectDetailMarker.className = "marker";
@@ -121,8 +123,9 @@ const buildProjectCard = (project) => {
   cardContainer.appendChild(cardImage);
   cardContainer.appendChild(cardHeadDiv);
   cardContainer.appendChild(cardBodyDiv);
-  containerDiv.appendChild(showcase);
-  containerDiv.appendChild(thumbnailContainer);
+  containerDiv.appendChild(cardContainer);
+  // containerDiv.appendChild(showcase);
+  // containerDiv.appendChild(thumbnailContainer);
 
   // Add content dynamically to the html document
   cardImage.setAttribute("src", `${project.img}`);
@@ -152,10 +155,18 @@ const buildProjectCard = (project) => {
   return work.appendChild(containerDiv);
 };
 
-let card = buildProjectCard(projectData[1]);
+let card = buildProjectCard(projectData[0]);
 console.log(card);
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   // create elements of the card and added all relevant attributed and children
 
 // });
+
+// Form Validation
+const contactForm = document.querySelector(".contact__form");
+const contactName = document.querySelector(".contact__name");
+const contactTextArea = document.querySelector(".contact__text");
+const contactEmail = document.querySelector(".contact__email");
+const contactSubmit = document.querySelector(".contact__cta");
+const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;

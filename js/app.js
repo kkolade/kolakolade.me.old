@@ -170,3 +170,26 @@ const contactTextArea = document.querySelector(".contact__text");
 const contactEmail = document.querySelector(".contact__email");
 const contactSubmit = document.querySelector(".contact__cta");
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+const err = document.querySelector('.submit-error');
+
+contactSubmit.addEventListener('click', validateEmail);
+
+function validateEmail(e) {
+  const emailValue = e.target.value;
+  console.log(emailValue);
+  e.preventDefault(); 
+  
+  if(emailValue.match(regEx)){
+    error.style.display = 'none';
+    email.style.border = '1px solid #d0d9d4';
+    return true;
+  }
+  else {
+    error.style.display = 'block';
+    error.innerHTML = 'Email should only contain lowercase letters';
+    email.style.border = '1px solid rgb(204, 11, 11)';
+    return false;
+  }
+}
+
+

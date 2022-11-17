@@ -165,10 +165,7 @@ console.log(card);
 
 // Form Validation
 const contactForm = document.querySelector(".contact__form");
-const contactName = document.querySelector(".contact__name");
-const contactTextArea = document.querySelector(".contact__text");
 const contactEmail = document.querySelector(".contact__email");
-const contactSubmit = document.querySelector(".contact__cta");
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const err = document.querySelector(".submit-error");
 

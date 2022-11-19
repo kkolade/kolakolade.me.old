@@ -30,7 +30,10 @@ const projectsData = [
     title: "TONIC",
     summary: ["CANOPY", "Back end Dev", 2015],
     img: "asset/images/portfolio-1.jpg",
+    popupimg: "asset/images/facebook-project.png",
     desc: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+    projectStory:
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas consequuntur esse distinctio atque! Quos voluptatem, aut qui provident repudiandae corrupti repellat tempora veritatis ut enim ipsam odio a dolores natus doloremque nam ad eius! Voluptate, unde omnis.",
     tech: ["html", "css", "javaScript"],
   },
 
@@ -65,6 +68,9 @@ const projectsData = [
 // WORK SECTION
 // create HTML elements for the Work Section
 const work = document.querySelector("#work"),
+  modal = document.querySelector(".modal"),
+  popup = document.querySelector(".popup"),
+  closePopup = document.querySelector("close-popup"),
   workContainer = document.createElement("div"),
   card = document.createElement("div"),
   cardImage = document.createElement("img"),
@@ -93,8 +99,7 @@ popupBtnSourceView.className = "work__cta btn-primary";
 // Function to create project card
 const createProjectCard = (project) => {
   // create HTML elements for the Work Section
-  const work = document.querySelector("#work"),
-    workContainer = document.createElement("div"),
+  const workContainer = document.createElement("div"),
     card = document.createElement("div"),
     cardImage = document.createElement("img"),
     cardContent = document.createElement("div"),
@@ -115,9 +120,7 @@ const createProjectCard = (project) => {
   projectSummary.className = "work__card-info";
   projectDescription.className = "work__card-description description-text";
   badgeContainer.className = "work__tech work__card-technology-list";
-  cardBtn.className = "work__cta btn-primary";
-  popupBtnLiveView.className = "work__cta btn-primary";
-  popupBtnSourceView.className = "work__cta btn-primary";
+  cardBtn.className = "work__cta btn-primary project-btn";
   cardImage.setAttribute("src", `${project.img}`);
   cardTitle.textContent = `${project.title}`;
   projectDescription.textContent = `${project.desc}`;
@@ -147,6 +150,3 @@ const createProjectCard = (project) => {
 };
 
 projectsData.forEach((project) => createProjectCard(project));
-
-// Create Modal and Popup
-// Function to create modal card

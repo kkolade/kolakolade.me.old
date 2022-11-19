@@ -137,6 +137,50 @@ img {
   gap: 18px;
 }
 
+.hero__headline--main {
+  animation-name: slide_right;
+  animation-duration: 1s;
+}
+
+@keyframes slide_right {
+  0% {
+    position: relative;
+    left: -400px;
+  }
+
+  75% {
+    position: relative;
+    left: 40px;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+  }
+}
+
+.hero__headline--sub {
+  animation-name: slide_left;
+  animation-duration: 1s;
+}
+
+@keyframes slide_left {
+  0% {
+    position: relative;
+    right: -400px;
+  }
+
+  75% {
+    position: relative;
+    right: 40px;
+  }
+
+  100% {
+    position: relative;
+    right: 0;
+  }
+}
+
 section.hero,
 section.work {
   padding-bottom: 100px;
@@ -349,12 +393,16 @@ section.work {
   background-color: white;
   white-space: nowrap;
   margin-right: 20px;
+  transition-property: transform;
+  transition-duration: 1s;
+
 }
 
 .btn-primary:hover {
   color: #fff;
   background-color: #396df2;
   box-shadow: 0 5px 5px rgba(57, 109, 242, 0.2);
+  transform: rotate(10deg);
 }
 
 .btn-primary:active {
@@ -497,6 +545,15 @@ section.work {
 
   .work__card--reversed {
     flex-direction: row-reverse;
+  }
+
+  .work__card-image {
+    transition-property: transform;
+    transition-duration: 1s;
+  }
+
+  .work__card-image:hover {
+    transform: scale(1.03);
   }
 
   .card-item {

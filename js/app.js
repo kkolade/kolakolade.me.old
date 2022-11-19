@@ -165,158 +165,25 @@ console.log(card);
 
 // Form Validation
 const contactForm = document.querySelector(".contact__form");
-const contactName = document.querySelector(".contact__name");
-const contactTextArea = document.querySelector(".contact__text");
 const contactEmail = document.querySelector(".contact__email");
-const contactSubmit = document.querySelector(".contact__cta");
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
-const err = document.querySelector('.submit-error');
+const err = document.querySelector(".submit-error");
 
-contactSubmit.addEventListener('click', validateEmail);
-
+contactForm.addEventListener("click", validateEmail);
 function validateEmail(e) {
   const emailValue = e.target.value;
-  console.log(emailValue);
-  e.preventDefault(); 
-  
-  if(emailValue.match(regEx)){
-    error.style.display = 'none';
-    email.style.border = '1px solid #d0d9d4';
+  e.preventDefault();
+
+  if (contactEmail.value.match(regEx)) {
+    err.style.display = "none";
+    contactEmail.style.border = "1px solid #d0d9d4";
     return true;
-  }
-  else {
-    error.style.display = 'block';
-    error.innerHTML = 'Email should only contain lowercase letters';
-    email.style.border = '1px solid rgb(204, 11, 11)';
+  } else {
+    err.style.display = "block";
+    err.innerHTML = "Email feild should only contain lowercase letters";
+    contactEmail.style.border = "1px solid rgb(204, 11, 11)";
     return false;
   }
 }
 
 
-// Create Modal and Popup
-// Function to create modal card
-const createPopupCard = (project) => {
-  // create HTML elements for the Work Section
-  const popupCard = document.createElement("div"),
-    card = document.createElement("div"),
-    cardHead = document.createElement("div"),
-    cardTitle = document.createElement("h3"),
-    projectSummary = document.createElement("div"),
-    cardImage = document.createElement("img"),
-    cardContent = document.createElement("div"),
-    projectDescription = document.createElement("p"),
-    extraBox = document.createElement("div"),
-    badgeContainer = document.createElement("li"),
-    btnContainer = document.createElement("div"),
-    popupBtnLiveView = document.createElement("button"),
-    popupBtnSourceView = document.createElement("button");
-  // Add attributes and append Children to the created elements
-  card.className = "popup-card";
-  cardHead.className = "card-header";
-  cardImage.className = "popup-img";
-  cardContent.className = "work__card-text-content card-item content-card";
-  cardTitle.className = "work__card-title";
-  projectSummary.className = "work__card-info";
-  projectDescription.className = "work__card-description description-text";
-  extraBox.className = "extra-box";
-  badgeContainer.className = "work__tech work__card-technology-list";
-  btnContainer.className = "btn-container";
-  // cardBtn.className = "work__cta btn-primary";
-  popupBtnLiveView.textContent = "See Live";
-  popupBtnLiveView.className = "work__cta btn-primary";
-  popupBtnSourceView.textContent = "See Source";
-  popupBtnSourceView.className = "work__cta btn-primary";
-  cardImage.setAttribute("src", `${project.popupimg}`);
-  cardTitle.textContent = `${project.title}`;
-  projectDescription.className = `project-story`;
-  projectDescription.textContent = `${project.projectStory}`;
-  cardHead.appendChild(cardTitle);
-  cardHead.appendChild(projectSummary);
-  extraBox.appendChild(badgeContainer);
-  extraBox.appendChild(btnContainer);
-  btnContainer.appendChild(popupBtnLiveView);
-  btnContainer.appendChild(popupBtnSourceView);
-  cardContent.appendChild(projectDescription);
-  cardContent.appendChild(extraBox);
-  card.appendChild(cardHead);
-  card.appendChild(cardImage);
-  card.appendChild(cardContent);
-  for (i = 0; i < project.summary.length; i++) {
-    const detail = document.createElement("p");
-    detail.textContent = project.summary[i];
-    projectSummary.appendChild(detail);
-  }
-  for (i = 0; i < project.tech.length; i++) {
-    const listItem = document.createElement("li");
-    listItem.className = "work__card-technology-item";
-    listItem.textContent = project.tech[i];
-    badgeContainer.appendChild(listItem);
-  }
-  return card;
-};
-// let popCard = createPopupCard(projectsData[0]);
-// console.log(popCard);
-work.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target.classList.contains("project-btn")) {
-    modal.style.display = "block";
-    let newCard = createPopupCard(projectsData[0]);
-    popup.appendChild(newCard);
-    console.log(newCard);
-  }
-});
-modal.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log(e.target);
-  if (e.target.classList.contains("close-popup")) {
-    modal.style.display = "none";
-  }
-})
-
-const modal = document.querySelector('.modal-container');
-
-projectData.forEach(project=>{
-  modal.appendChild(
-  `<div class="card" id="popup">
-  <div class="card-header">
-    <h3 class="modal-project-title"></h3>
-    <ul class="companies">
-      <li>${project.detail[0]}</li>
-      <li>${project.detail[1]}</li>
-      <li>${project.detail[2]}</li> 
-      <li>${project.detail[3]}</li>
-      <li>${project.detail[4]}</li>
-    </ul>
-    <div class="close-icon closeModal" onclick="closePopUp()"> <i class="fa-solid fa-times"></i></div>
-  </div>
-  <div class="card-body">
-    <img class="project-image" src=${project.img} alt="">
-  </div>
-  <div class="card-description-container">
-    <div class="card-description">
-      <p class="modal-project-description">${project.desc}</p>
-    </div>
-    <div class="card-language-buttons">
-      <div class="card-languages">
-        <ul class="languages-used">
-          <li>${project.tech[0]}</li>
-          <li>${project.tech[1]}</li>
-          <li>${project.tech[2]}</li>
-        </ul>
-      </div>
-      <div class="button-container">
-      <button onclick="${project.repo}" type="button" class="btn">see live <span><i class="fa-solid fa-arrow-up-right-from-square"></i></span></button>
-      <button onclick="${project.site}" type="button" class="btn">see source <span> <i class="fa-brands fa-github"></i></button>
-      </div>
-    </div>
-  </div>
-</div>`
-)});
-
-const myModal = document.querySelector('#myModal');
-function openPopUp() {
-  myModal.classList.add('open-popup');
-}
-function closePopUp() {
-  myModal.classList.remove('open-popup');
-}

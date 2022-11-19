@@ -211,7 +211,7 @@ const createPopupCard = (project) => {
 
   const popupBtnLiveView = document.createElement("button");
   const popupBtnLiveIcon = document.createElement("img");
-  popupBtnLiveView.TextContent = "See Live";
+  popupBtnLiveView.textContent = "See Live";
   popupBtnLiveView.className = "work__cta btn-primary";
   popupBtnLiveIcon.className = "btnImg";
   popupBtnLiveIcon.setAttribute("src", "asset/images/liveIcon.png");

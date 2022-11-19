@@ -447,9 +447,9 @@ section.work {
 }
 
 .btnImg {
-  width: 12px;
-  height: 12px;
-  margin-left: 3px;
+  width: 14px;
+  height: 14px;
+  margin: 0 10px;
 }
 
 /* Breakpoint syles */

@@ -150,3 +150,88 @@ const createProjectCard = (project) => {
 };
 
 projectsData.forEach((project) => createProjectCard(project));
+
+// Create Modal and Popup
+// Function to create modal card
+const createPopupCard = (project) => {
+  // create HTML elements for the Work Section
+
+  const popupCard = document.createElement("div"),
+    card = document.createElement("div"),
+    cardHead = document.createElement("div"),
+    cardTitle = document.createElement("h3"),
+    projectSummary = document.createElement("div"),
+    cardImage = document.createElement("img"),
+    cardContent = document.createElement("div"),
+    projectDescription = document.createElement("p"),
+    extraBox = document.createElement("div"),
+    badgeContainer = document.createElement("li"),
+    btnContainer = document.createElement("div"),
+    popupBtnLiveView = document.createElement("button"),
+    popupBtnSourceView = document.createElement("button");
+
+  // Add attributes and append Children to the created elements
+  card.className = "popup-card";
+  cardHead.className = "card-header";
+  cardImage.className = "popup-img";
+  cardContent.className = "work__card-text-content card-item content-card";
+  cardTitle.className = "work__card-title";
+  projectSummary.className = "work__card-info";
+  projectDescription.className = "work__card-description description-text";
+  extraBox.className = "extra-box";
+  badgeContainer.className = "work__tech work__card-technology-list";
+  btnContainer.className = "btn-container";
+  // cardBtn.className = "work__cta btn-primary";
+  popupBtnLiveView.textContent = "See Live";
+  popupBtnLiveView.className = "work__cta btn-primary";
+  popupBtnSourceView.textContent = "See Source";
+  popupBtnSourceView.className = "work__cta btn-primary";
+  cardImage.setAttribute("src", `${project.popupimg}`);
+  cardTitle.textContent = `${project.title}`;
+  projectDescription.className = `project-story`;
+  projectDescription.textContent = `${project.projectStory}`;
+  cardHead.appendChild(cardTitle);
+  cardHead.appendChild(projectSummary);
+  extraBox.appendChild(badgeContainer);
+  extraBox.appendChild(btnContainer);
+  btnContainer.appendChild(popupBtnLiveView);
+  btnContainer.appendChild(popupBtnSourceView);
+  cardContent.appendChild(projectDescription);
+  cardContent.appendChild(extraBox);
+  card.appendChild(cardHead);
+  card.appendChild(cardImage);
+  card.appendChild(cardContent);
+  for (i = 0; i < project.summary.length; i++) {
+    const detail = document.createElement("p");
+    detail.textContent = project.summary[i];
+    projectSummary.appendChild(detail);
+  }
+
+  for (i = 0; i < project.tech.length; i++) {
+    const listItem = document.createElement("li");
+    listItem.className = "work__card-technology-item";
+    listItem.textContent = project.tech[i];
+    badgeContainer.appendChild(listItem);
+  }
+  return card;
+};
+
+// let popCard = createPopupCard(projectsData[0]);
+// console.log(popCard);
+work.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target.classList.contains("project-btn")) {
+    modal.style.display = "block";
+    let newCard = createPopupCard(projectsData[0]);
+    popup.appendChild(newCard);
+    console.log(newCard);
+  }
+});
+
+modal.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(e.target);
+  if (e.target.classList.contains("close-popup")) {
+    modal.style.display = "none";
+  }
+});

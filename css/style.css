@@ -340,14 +340,15 @@ section.work {
 .btn-primary {
   font-weight: 500;
   font-size: 17px;
-  line-height: 24%;
   letter-spacing: 0.03rem;
   color: #396df2;
   border: 1px solid #396df2;
   border-radius: 8px;
-  padding: 20px 12px;
+  padding: 15px 12px;
   width: fit-content;
   background-color: white;
+  white-space: nowrap;
+  margin-right: 20px;
 }
 
 .btn-primary:hover {
@@ -399,10 +400,10 @@ section.work {
 
 .popup {
   position: absolute;
-  width: 80%;
-  height: 90%;
+  width: 90%;
+  /* height: 90%; */
   top: 5%;
-  left: 10%;
+  left: 5%;
   background-color: #fff;
   border-radius: 10px;
 }
@@ -421,10 +422,6 @@ section.work {
   margin: 0;
 } */
 
-.project-story {
-  width: 65%;
-}
-
 .extra-box {
   display: flex;
   flex-direction: column;
@@ -439,7 +436,6 @@ section.work {
 
 .popup-img {
   display: inline-block;
-  width: 50%;
   align-self: center;
 }
 
@@ -448,6 +444,12 @@ section.work {
   top: 15px;
   right: 20px;
   cursor: pointer;
+}
+
+.btnImg {
+  width: 12px;
+  height: 12px;
+  margin-left: 3px;
 }
 
 /* Breakpoint syles */
@@ -556,5 +558,18 @@ section.work {
     display: flex;
     flex-direction: row;
     padding: 0;
+  }
+
+  .popup {
+    width: 80%;
+    left: 10%;
+  }
+
+  .popup-img {
+    width: 50%;
+  }
+
+  .project-story {
+    width: 65%;
   }
 }

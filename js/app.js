@@ -30,10 +30,9 @@ const projectsData = [
     title: "TONIC",
     summary: ["CANOPY", "Back end Dev", 2015],
     img: "asset/images/portfolio-1.jpg",
-    popupimg: "asset/images/facebook-project.png",
     desc: "A daily selection of privately personalized reads; no accounts or sign-ups required.",
     projectStory:
-      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas consequuntur esse distinctio atque! Quos voluptatem, aut qui provident repudiandae corrupti repellat tempora veritatis ut enim ipsam odio a dolores natus doloremque nam ad eius! Voluptate, unde omnis.",
+      " Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quas consequuntur esse distinctio atque! Quos voluptatem, aut qui provident repudiandae corrupti repellat tempora veritatis ut enim ipsam ",
     tech: ["html", "css", "javaScript"],
   },
 
@@ -67,34 +66,50 @@ const projectsData = [
 
 // WORK SECTION
 // create HTML elements for the Work Section
-const work = document.querySelector("#work"),
-  modal = document.querySelector(".modal"),
-  popup = document.querySelector(".popup"),
-  closePopup = document.querySelector("close-popup"),
-  workContainer = document.createElement("div"),
-  card = document.createElement("div"),
-  cardImage = document.createElement("img"),
-  cardContent = document.createElement("div"),
-  cardTitle = document.createElement("h3"),
-  projectSummary = document.createElement("div"),
-  projectDescription = document.createElement("p"),
-  badgeContainer = document.createElement("li"),
-  cardBtn = document.createElement("button"),
-  popupBtnLiveView = document.createElement("button"),
-  popupBtnSourceView = document.createElement("button");
+const work = document.querySelector("#work");
+
+const btnArray = [];
+
+const modal = document.querySelector(".modal");
+
+const popup = document.querySelector(".popup");
+
+const closePopup = document.querySelector("close-popup");
+
+const workContainer = document.createElement("div");
+
+const card = document.createElement("div");
+card.className = "work__card";
+
+const cardImage = document.createElement("img");
+cardImage.className = "work__card-image card-item";
+
+const cardContent = document.createElement("div");
+cardContent.className = "work__card-text-content card-item";
+
+const cardTitle = document.createElement("h3");
+cardTitle.className = "work__card-title";
+
+const projectSummary = document.createElement("div");
+projectSummary.className = "work__card-info";
+
+const projectDescription = document.createElement("p");
+projectDescription.className = "work__card-description description-text";
+
+const badgeContainer = document.createElement("li");
+badgeContainer.className = "work__tech work__card-technology-list";
+
+const cardBtn = document.createElement("button");
+cardBtn.className = "work__cta btn-primary";
+
+const popupBtnLiveView = document.createElement("button");
+
+const popupBtnSourceView = document.createElement("button");
 
 // Add attributes and append Children to the created elements
-workContainer.className = "container work__container";
-card.className = "work__card";
-cardImage.className = "work__card-image card-item";
-cardContent.className = "work__card-text-content card-item";
-cardTitle.className = "work__card-title";
-projectSummary.className = "work__card-info";
-projectDescription.className = "work__card-description description-text";
-badgeContainer.className = "work__tech work__card-technology-list";
-cardBtn.className = "work__cta btn-primary";
-popupBtnLiveView.className = "work__cta btn-primary";
-popupBtnSourceView.className = "work__cta btn-primary";
+// workContainer.className = "container work__container";
+// popupBtnLiveView.className = "work__cta btn-primary";
+// popupBtnSourceView.className = "work__cta btn-primary";
 
 // Function to create project card
 const createProjectCard = (project) => {
@@ -146,50 +161,72 @@ const createProjectCard = (project) => {
   }
   workContainer.appendChild(card);
   work.appendChild(workContainer);
+  let projectId = project.id;
+  btnArray.push(projectId);
   return work;
 };
 
 projectsData.forEach((project) => createProjectCard(project));
-
+console.log(btnArray);
 // Create Modal and Popup
 // Function to create modal card
 const createPopupCard = (project) => {
   // create HTML elements for the Work Section
 
-  const popupCard = document.createElement("div"),
-    card = document.createElement("div"),
-    cardHead = document.createElement("div"),
-    cardTitle = document.createElement("h3"),
-    projectSummary = document.createElement("div"),
-    cardImage = document.createElement("img"),
-    cardContent = document.createElement("div"),
-    projectDescription = document.createElement("p"),
-    extraBox = document.createElement("div"),
-    badgeContainer = document.createElement("li"),
-    btnContainer = document.createElement("div"),
-    popupBtnLiveView = document.createElement("button"),
-    popupBtnSourceView = document.createElement("button");
+  const popupCard = document.createElement("div");
 
-  // Add attributes and append Children to the created elements
+  const card = document.createElement("div");
   card.className = "popup-card";
+
+  const cardHead = document.createElement("div");
   cardHead.className = "card-header";
-  cardImage.className = "popup-img";
-  cardContent.className = "work__card-text-content card-item content-card";
+
+  const cardTitle = document.createElement("h3");
   cardTitle.className = "work__card-title";
-  projectSummary.className = "work__card-info";
-  projectDescription.className = "work__card-description description-text";
-  extraBox.className = "extra-box";
-  badgeContainer.className = "work__tech work__card-technology-list";
-  btnContainer.className = "btn-container";
-  // cardBtn.className = "work__cta btn-primary";
-  popupBtnLiveView.textContent = "See Live";
-  popupBtnLiveView.className = "work__cta btn-primary";
-  popupBtnSourceView.textContent = "See Source";
-  popupBtnSourceView.className = "work__cta btn-primary";
-  cardImage.setAttribute("src", `${project.popupimg}`);
   cardTitle.textContent = `${project.title}`;
+
+  const projectSummary = document.createElement("div");
+  projectSummary.className = "work__card-info";
+
+  const cardImage = document.createElement("img");
+  cardImage.setAttribute("src", `${project.img}`);
+  cardImage.className = "popup-img";
+
+  const cardContent = document.createElement("div");
+  cardContent.className = "work__card-text-content card-item content-card";
+
+  const projectDescription = document.createElement("p");
+  projectDescription.className = "work__card-description description-text";
   projectDescription.className = `project-story`;
   projectDescription.textContent = `${project.projectStory}`;
+
+  const extraBox = document.createElement("div");
+  extraBox.className = "extra-box";
+
+  const badgeContainer = document.createElement("li");
+  badgeContainer.className = "work__tech work__card-technology-list";
+
+  const btnContainer = document.createElement("div");
+  btnContainer.className = "btn-container";
+
+  const popupBtnLiveView = document.createElement("button");
+  const popupBtnLiveIcon = document.createElement("img");
+  popupBtnLiveView.TextContent = "See Live";
+  popupBtnLiveView.className = "work__cta btn-primary";
+  popupBtnLiveIcon.className = "btnImg";
+  popupBtnLiveIcon.setAttribute("src", "asset/images/liveIcon.png");
+  popupBtnLiveView.appendChild(popupBtnLiveIcon);
+
+  const popupBtnSourceView = document.createElement("button");
+  const popupBtnSourceIcon = document.createElement("img");
+  popupBtnSourceView.textContent = "See Source";
+  popupBtnSourceView.className = "work__cta btn-primary";
+  popupBtnSourceIcon.className = "btnImg";
+  popupBtnSourceIcon.setAttribute("src", "asset/images/sourceIcon.png");
+  popupBtnSourceView.appendChild(popupBtnSourceIcon);
+
+  // Add attributes and append Children to the created elements
+
   cardHead.appendChild(cardTitle);
   cardHead.appendChild(projectSummary);
   extraBox.appendChild(badgeContainer);

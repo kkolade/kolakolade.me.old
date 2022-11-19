@@ -124,7 +124,7 @@ const createProjectCard = (project) => {
   cardImage.setAttribute("src", `${project.img}`);
   cardTitle.textContent = `${project.title}`;
   projectDescription.textContent = `${project.desc}`;
-  cardBtn.textContent = "See Projct";
+  cardBtn.textContent = "See Project";
   cardContent.appendChild(cardTitle);
   cardContent.appendChild(projectSummary);
   cardContent.appendChild(projectDescription);
@@ -218,20 +218,20 @@ const createPopupCard = (project) => {
 
 // let popCard = createPopupCard(projectsData[0]);
 // console.log(popCard);
+let newCard;
 work.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.classList.contains("project-btn")) {
     modal.style.display = "block";
-    let newCard = createPopupCard(projectsData[0]);
+    newCard = createPopupCard(projectsData[0]);
     popup.appendChild(newCard);
-    console.log(newCard);
   }
 });
 
 modal.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(e.target);
   if (e.target.classList.contains("close-popup")) {
+    newCard.remove();
     modal.style.display = "none";
   }
 });

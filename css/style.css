@@ -288,8 +288,9 @@ section.work {
   color: white;
   border-radius: 75px 0 0 0;
   align-items: center;
-  background: url("../asset/images/contact-bg-mobile.png") center center / cover
-      no-repeat,
+  background:
+    url("../asset/images/contact-bg-mobile.png") center center / cover
+    no-repeat,
     #6070ff;
   padding: 80px 0 0 0;
 }
@@ -401,6 +402,7 @@ section.work {
 .popup {
   position: absolute;
   width: 90%;
+
   /* height: 90%; */
   top: 5%;
   left: 5%;
@@ -414,13 +416,6 @@ section.work {
   flex-direction: column;
   padding: 20px;
 }
-
-/* .content-card {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-} */
 
 .extra-box {
   display: flex;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // MOBILE MENU
 // Variabless
 

@@ -1,3 +1,4 @@
+// MOBILE MENU
 // Variabless
 
 const toggleIcons = document.querySelector(".main-nav__toggle-icons");
@@ -22,3 +23,4 @@ toggleIcons.addEventListener("click", (e) => {
     mainHeader.classList.add("main-header_toggle");
   }
 });
+

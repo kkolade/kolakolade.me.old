@@ -229,6 +229,10 @@ const modal = document.querySelector('.modal');
 const popup = document.querySelector('.popup');
 const closeModal = document.querySelector('.close-modal');
 
+const modal = document.querySelector('.modal');
+const popup = document.querySelector('.popup');
+const closeModal = document.querySelector('.close-modal');
+
 work.addEventListener('click', (e) => {
   let popupCard = buildModalCard(projectData[e.target.id - 1]);
   e.preventDefault();
@@ -238,13 +242,3 @@ work.addEventListener('click', (e) => {
     popupCard.display = 'block'; 
   } 
 })
-
-
-modal.addEventListener('click', (e) => {
-  if (e.target.classList.contains('close-modal')){
-    modal.firstElementChild.firstElementChild.nextSibling.remove();
-    modal.style.display  = 'none';
-  }
-
-})
-

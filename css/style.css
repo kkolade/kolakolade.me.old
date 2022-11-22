@@ -207,7 +207,8 @@ section.work {
   padding-top: 120px;
 }
 
-.work__card {
+.work__card,
+.modal__card {
   background-color: #fff;
   border-radius: 16px;
   border: 1px solid #dfe1e6;
@@ -227,6 +228,7 @@ section.work {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
+  margin: 10px 0;
 }
 
 .work__card-info {
@@ -236,6 +238,7 @@ section.work {
   font-weight: 600px;
   font-size: 13px;
   line-height: 16px;
+  margin: 10px 0;
 }
 
 .work__card-project-titlet--callout {
@@ -249,6 +252,10 @@ section.work {
   border-radius: 50%;
 }
 
+.work__card-description {
+  margin: 12px 0;
+}
+
 .work__card-technology-list {
   display: flex;
   gap: 12px;
@@ -257,12 +264,70 @@ section.work {
   line-height: 16px;
   letter-spacing: 3%;
   color: #293eff;
+  margin: 10px 0;
 }
 
 .work__card-technology-item {
   background-color: #e5e5e5;
   padding: 4px 12px;
   border-radius: 8px;
+}
+
+/* Modal and popup */
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: none;
+}
+
+.modal__card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__card-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__card-description {
+  flex-basis: 60%;
+}
+
+.btn-container {
+  display: flex;
+}
+
+.popup {
+  background-color: #fff;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  z-index: 25;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.popup-btn {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+.popup-btn-img {
+  width: 20px;
+  height: 20px;
+  margin: 0 0 0 6px;
 }
 
 .about__container,
@@ -385,6 +450,7 @@ section.work {
 }
 
 .cta-primary {
+  display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
   color: #5663db;
@@ -393,6 +459,7 @@ section.work {
 .btn-primary {
   font-weight: 500;
   font-size: 17px;
+  line-height: 24%;
   letter-spacing: 0.03rem;
   color: #396df2;
   border: 1px solid #396df2;
@@ -442,7 +509,7 @@ section.work {
   padding-top: 20px;
 }
 
-/* POPUP */
+POPUP
 .modal {
   position: fixed;
   top: 0;
@@ -545,8 +612,42 @@ section.work {
     gap: 5%;
   }
 
+  .modal__card-text-content {
+    flex-direction: row;
+  }
+
   .work__card--reversed {
     flex-direction: row-reverse;
+  }
+
+  .modal__description {
+    flex-direction: row;
+  }
+
+  .modal__card-image {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .card-item {
+    flex-basis: 50%;
+  }
+
+  .work__card-text-content {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .popup {
+    top: 10%;
+    left: 10%;
+    width: 80%;
+  }
+
+  .modal__card {
+    border: none;
+    width: 90%;
   }
 
   .work__card-image {
@@ -558,14 +659,14 @@ section.work {
     transform: scale(1.03);
   }
 
-  .card-item {
+  /* .card-item {
     flex-basis: 50%;
   }
 
   .work__card-text-content {
     margin-top: 30px;
     padding: 0 30px;
-  }
+  } */
 
   .about__container {
     flex-direction: row;

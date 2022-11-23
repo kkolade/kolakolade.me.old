@@ -92,8 +92,8 @@ img {
   line-height: 44px;
   background: transparent;
   opacity: 0.9;
-  background-color: #6070ff;
   backdrop-filter: blur(5px);
+  background-color: #6070ff;
   padding-left: 32px;
   padding-top: 90px;
 }
@@ -123,7 +123,7 @@ img {
 .fa-solid.fa-times {
   color: #fff;
   padding-top: 15px;
-  padding-right: 15px;
+  padding-right: 12px;
   position: fixed;
 }
 
@@ -204,7 +204,7 @@ section.work {
   display: grid;
   grid-template-rows: auto auto auto auto;
   row-gap: 10px;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .work__card,
@@ -489,6 +489,11 @@ section.work {
   margin-top: 20px;
 }
 
+.popup-btn-img {
+  display: inline-block;
+  margin: 0 20px 0 10px;
+}
+
 .description-text {
   font-weight: 400;
   font-size: 15px;
@@ -556,10 +561,11 @@ POPUP
   align-self: center;
 }
 
-.close-popup {
+.fa-solid.fa-times.close-modal {
+  color: #444;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 8px;
+  right: 12px;
   cursor: pointer;
 }
 
@@ -612,6 +618,10 @@ POPUP
     gap: 5%;
   }
 
+  .modal__card{
+    margin: 0 auto;
+  }
+
   .modal__card-text-content {
     flex-direction: row;
   }
@@ -657,74 +667,5 @@ POPUP
 
   .work__card-image:hover {
     transform: scale(1.03);
-  }
-
-  /* .card-item {
-    flex-basis: 50%;
-  }
-
-  .about__container {
-    flex-direction: row;
-  }
-
-  .about__bio,
-  .about__specialisation {
-    flex-basis: 50%;
-  }
-
-  .about__categories__sub.active {
-    display: flex;
-    gap: 12px;
-  }
-
-  .about__languages-card {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 122px;
-    height: 120px;
-  }
-
-  .contact {
-    background: url("../asset/images/contact-bg.png") no-repeat, #6070ff;
-  }
-
-  .contact__container {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-
-  .contact__form {
-    text-align: center;
-  }
-
-  .bottom_line {
-    display: none;
-  }
-
-  section.contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .content-card {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .popup {
-    width: 80%;
-    left: 10%;
-  }
-
-  .popup-img {
-    width: 50%;
-  }
-
-  .project-story {
-    width: 65%;
   }
 }

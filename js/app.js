@@ -55,7 +55,6 @@ const projectData = [
     detail: ["CANOPY", ".", "Back end Dev", ".", 2015],
     img: "./asset/images/portfolio-3.jpg",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    detailDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quia commodi molestias vero porro beatae provident blanditiis odit voluptas autem modi praesentium, sapiente, animi ullam placeat temporibus voluptatem eaque illum? Ullam consectetur et quisquam reiciendis dolorem dolorum quidem, ipsum consequuntur, ducimus labore vitae tenetur! Sapiente quaerat inventore corrupti voluptatum eveniet, voluptas provident perferendis doloribus ut dolore voluptatem non autem praesentium repellat voluptatibus, laborum temporibus saepe commodi quisquam corporis error molestias atque cum eius! Ipsam facilis autem temporibus deserunt voluptas, tempore quam vel. Eligendi, perspiciatis provident optio cum odit quo vero et itaque tempora veniam id neque est voluptates reiciendis quisquam nam doloribus aspernatur minus quis ut earum impedit aliquid dignissimos? Eaque, itaque eum! Nihil tempore, fuga, odio accusantium dolore reiciendis perspiciatis sapiente nobis repellendus quam consequatur magnam suscipit? Aliquam at expedita ex in laborum? Obcaecati amet incidunt tempora sequi. Doloremque, aliquid qui? Reiciendis unde aliquam quidem enim praesentium, vitae nemo?',
     tech: ["html", "css", "javaScript"],
     site: "https://kolakolade.me/project3",
     repo: "https://github.com/kolakolade/project3",
@@ -66,7 +65,6 @@ const projectData = [
     detail: ["CANOPY", ".", "Back end Dev", ".", 2015],
     img: "./asset/images/portfolio-4.jpg",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    detailDesc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quia commodi molestias vero porro beatae provident blanditiis odit voluptas autem modi praesentium, sapiente, animi ullam placeat temporibus voluptatem eaque illum? Ullam consectetur et quisquam reiciendis dolorem dolorum quidem, ipsum consequuntur, ducimus labore vitae tenetur! Sapiente quaerat inventore corrupti voluptatum eveniet, voluptas provident perferendis doloribus ut dolore voluptatem non autem praesentium repellat voluptatibus, laborum temporibus saepe commodi quisquam corporis error molestias atque cum eius! Ipsam facilis autem temporibus deserunt voluptas, tempore quam vel. Eligendi, perspiciatis provident optio cum odit quo vero et itaque tempora veniam id neque est voluptates reiciendis quisquam nam doloribus aspernatur minus quis ut earum impedit aliquid dignissimos? Eaque, itaque eum! Nihil tempore, fuga, odio accusantium dolore reiciendis perspiciatis sapiente nobis repellendus quam consequatur magnam suscipit? Aliquam at expedita ex in laborum? Obcaecati amet incidunt tempora sequi. Doloremque, aliquid qui? Reiciendis unde aliquam quidem enim praesentium, vitae nemo?',
     tech: ["html", "css", "javaScript"],
     site: "https://kolakolade.me/project4",
     repo: "https://github.com/kolakolade/project4",
@@ -181,8 +179,10 @@ const buildModalCard = (project) => {
   imgLive.setAttribute('src', ('./asset/images/liveIcon.png'))
   imgSource.setAttribute('src', ('./asset/images/sourceIcon.png'))
 
-  seeLive.className = "work__cta btn-primary";
-  seeSource.className = "modal__cta btn-primary popup-btn";
+  seeLive.className = "modal__cta btn-primary";
+  seeLive.setAttribute('href', `${project.site}`)
+  seeSource.className = "modal__cta btn-primary";
+  seeSource.setAttribute('href', `${project.repo}`)
   seeLive.textContent = "See Live";
   seeSource.textContent = "See Source";
   imgLive.className = 'popup-btn-img';
@@ -225,5 +225,23 @@ const buildModalCard = (project) => {
 };
 
 // Append card to Modal
+const modal = document.querySelector('.modal');
+const popup = document.querySelector('.popup');
+const closeModal = document.querySelector('.close-modal');
 
+work.addEventListener('click', (e) => {
+  let popupCard = buildModalCard(projectData[e.target.id - 1]);
+  e.preventDefault();
+  if (e.target.classList.contains('work__cta')){
+    modal.style.display = 'block';
+    popup.appendChild(popupCard);
+    popupCard.display = 'block'; 
+  } 
+})
 
+modal.addEventListener('click', (e) => {
+  if (e.target.classList.contains('close-modal')){
+    modal.firstElementChild.firstElementChild.nextSibling.remove();
+    modal.style.display  = 'none';
+  }
+})

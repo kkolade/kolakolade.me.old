@@ -92,8 +92,8 @@ img {
   line-height: 44px;
   background: transparent;
   opacity: 0.9;
-  background-color: #6070ff;
   backdrop-filter: blur(5px);
+  background-color: #6070ff;
   padding-left: 32px;
   padding-top: 90px;
 }
@@ -123,7 +123,7 @@ img {
 .fa-solid.fa-times {
   color: #fff;
   padding-top: 15px;
-  padding-right: 15px;
+  padding-right: 12px;
   position: fixed;
 }
 
@@ -204,10 +204,11 @@ section.work {
   display: grid;
   grid-template-rows: auto auto auto auto;
   row-gap: 10px;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
-.work__card {
+.work__card,
+.modal__card {
   background-color: #fff;
   border-radius: 16px;
   border: 1px solid #dfe1e6;
@@ -227,6 +228,7 @@ section.work {
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
+  margin: 10px 0;
 }
 
 .work__card-info {
@@ -236,6 +238,7 @@ section.work {
   font-weight: 600px;
   font-size: 13px;
   line-height: 16px;
+  margin: 10px 0;
 }
 
 .work__card-project-titlet--callout {
@@ -249,6 +252,10 @@ section.work {
   border-radius: 50%;
 }
 
+.work__card-description {
+  margin: 12px 0;
+}
+
 .work__card-technology-list {
   display: flex;
   gap: 12px;
@@ -257,12 +264,60 @@ section.work {
   line-height: 16px;
   letter-spacing: 3%;
   color: #293eff;
+  margin: 10px 0;
 }
 
 .work__card-technology-item {
   background-color: #e5e5e5;
   padding: 4px 12px;
   border-radius: 8px;
+}
+
+/* Modal and popup */
+.modal {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: none;
+}
+
+.modal__card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__card-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__card-description {
+  flex-basis: 60%;
+}
+
+.popup {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  z-index: 25;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.popup-btn {
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
 .about__container,
@@ -385,6 +440,7 @@ section.work {
 }
 
 .cta-primary {
+  display: inline-block;
   font-weight: 400;
   text-transform: uppercase;
   color: #5663db;
@@ -393,6 +449,7 @@ section.work {
 .btn-primary {
   font-weight: 500;
   font-size: 17px;
+  line-height: 24%;
   letter-spacing: 0.03rem;
   color: #396df2;
   border: 1px solid #396df2;
@@ -422,6 +479,13 @@ section.work {
   margin-top: 20px;
 }
 
+.popup-btn-img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 20px 0 10px;
+}
+
 .description-text {
   font-weight: 400;
   font-size: 15px;
@@ -429,7 +493,6 @@ section.work {
 }
 
 /* Items to hide until javascript */
-
 .hidden {
   visibility: hidden;
 }
@@ -443,28 +506,6 @@ section.work {
 }
 
 /* POPUP */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 50;
-  display: none;
-}
-
-.popup {
-  position: absolute;
-  width: 90%;
-
-  /* height: 90%; */
-  top: 5%;
-  left: 5%;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
 .popup-card {
   display: flex;
   gap: 10px;
@@ -489,10 +530,11 @@ section.work {
   align-self: center;
 }
 
-.close-popup {
+.fa-solid.fa-times.close-modal {
+  color: #444;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 8px;
+  right: 12px;
   cursor: pointer;
 }
 
@@ -545,8 +587,43 @@ section.work {
     gap: 5%;
   }
 
+  .modal__card {
+    margin: 0 auto;
+    border: none;
+    width: 90%;
+  }
+
+  .modal__card-text-content {
+    flex-direction: row;
+  }
+
   .work__card--reversed {
     flex-direction: row-reverse;
+  }
+
+  .modal__description {
+    flex-direction: row;
+  }
+
+  .modal__card-image {
+    display: inline-block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .card-item {
+    flex-basis: 50%;
+  }
+
+  .work__card-text-content {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .popup {
+    top: 10%;
+    left: 10%;
+    width: 80%;
   }
 
   .work__card-image {
@@ -556,79 +633,5 @@ section.work {
 
   .work__card-image:hover {
     transform: scale(1.03);
-  }
-
-  .card-item {
-    flex-basis: 50%;
-  }
-
-  .work__card-text-content {
-    margin-top: 30px;
-    padding: 0 30px;
-  }
-
-  .about__container {
-    flex-direction: row;
-  }
-
-  .about__bio,
-  .about__specialisation {
-    flex-basis: 50%;
-  }
-
-  .about__categories__sub.active {
-    display: flex;
-    gap: 12px;
-  }
-
-  .about__languages-card {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 122px;
-    height: 120px;
-  }
-
-  .contact {
-    background: url("../asset/images/contact-bg.png") no-repeat, #6070ff;
-  }
-
-  .contact__container {
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-
-  .contact__form {
-    text-align: center;
-  }
-
-  .bottom_line {
-    display: none;
-  }
-
-  section.contact {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .content-card {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .popup {
-    width: 80%;
-    left: 10%;
-  }
-
-  .popup-img {
-    width: 50%;
-  }
-
-  .project-story {
-    width: 65%;
   }
 }

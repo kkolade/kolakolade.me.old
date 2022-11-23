@@ -663,11 +663,6 @@ POPUP
     flex-basis: 50%;
   }
 
-  .work__card-text-content {
-    margin-top: 30px;
-    padding: 0 30px;
-  } */
-
   .about__container {
     flex-direction: row;
   }

@@ -225,20 +225,5 @@ const buildModalCard = (project) => {
 };
 
 // Append card to Modal
-const modal = document.querySelector('.modal');
-const popup = document.querySelector('.popup');
-const closeModal = document.querySelector('.close-modal');
 
-const modal = document.querySelector('.modal');
-const popup = document.querySelector('.popup');
-const closeModal = document.querySelector('.close-modal');
 
-work.addEventListener('click', (e) => {
-  let popupCard = buildModalCard(projectData[e.target.id - 1]);
-  e.preventDefault();
-  if (e.target.classList.contains('work__cta')){
-    modal.style.display = 'block';
-    popup.appendChild(popupCard);
-    popupCard.display = 'block'; 
-  } 
-})

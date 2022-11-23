@@ -159,8 +159,8 @@ const buildModalCard = (project) => {
   // Elements needed for pop up
   const genericContainer = document.createElement("div");
   const btnContainer = document.createElement('div');
-  const seeLive = document.createElement('button');
-  const seeSource = document.createElement('button');
+  const seeLive = document.createElement('a');
+  const seeSource = document.createElement('a');
   const imgLive = document.createElement('img');
   const imgSource = document.createElement('img');
 

@@ -242,6 +242,7 @@ modal.addEventListener('click', (e) => {
     modal.firstElementChild.firstElementChild.nextSibling.remove();
     modal.style.display = 'none';
   }
+<<<<<<< HEAD
 });
 
 // form validation
@@ -264,3 +265,6 @@ function validateEmail(e) {
 }
 
 contactForm.addEventListener('submit', validateEmail);
+=======
+});
+>>>>>>> main

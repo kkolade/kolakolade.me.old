@@ -3,6 +3,7 @@
   "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
   "rules": {
     "at-rule-no-unknown": [
+<<<<<<< HEAD
       true,
       {
         "ignoreAtRules": [
@@ -15,18 +16,26 @@
       }
     ],
     "scss/at-rule-no-unknown": [
+=======
+>>>>>>> main
       true,
       {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen"
-        ]
+        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
+      }
+    ],
+<<<<<<< HEAD
+    "csstree/validator": true
+  },
+  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
+=======
+    "scss/at-rule-no-unknown":  [
+      true,
+      {
+        "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
     "csstree/validator": true
   },
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css"]
+  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"]
+>>>>>>> main
 }

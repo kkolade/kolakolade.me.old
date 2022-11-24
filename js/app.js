@@ -245,3 +245,10 @@ modal.addEventListener('click', (e) => {
     modal.style.display  = 'none';
   }
 })
+
+
+//form validation
+const contactForm = document.querySelector(".contact__form");
+const contactEmail = document.querySelector(".contact__email");
+const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
+const err = document.querySelector(".submit-error");

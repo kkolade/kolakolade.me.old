@@ -252,3 +252,18 @@ const contactForm = document.querySelector(".contact__form");
 const contactEmail = document.querySelector(".contact__email");
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const err = document.querySelector(".submit-error");
+
+contactForm.addEventListener("submit", validateEmail);
+function validateEmail(e) {
+  e.preventDefault();
+
+  if (!contactEmail.value.match(regEx)) {
+    err.style.display = "block";
+    err.innerHTML = "Email feild should only contain lowercase letters";
+    contactEmail.style.border = "1px solid rgb(204, 11, 11)";
+    return false;
+  } else {
+   
+    return true
+  }
+}

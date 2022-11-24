@@ -264,4 +264,3 @@ function validateEmail(e) {
 }
 
 contactForm.addEventListener('submit', validateEmail);
-

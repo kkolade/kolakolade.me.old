@@ -269,27 +269,3 @@ function validateEmail(e) {
 }
 
 contactForm.addEventListener('submit', validateEmail);
-
-// Local Storage
-// const formData = {
-//   name: contactName.value,
-//   contact: contactEmail.value,
-//   text: contactText.value
-// }
-
-// let storage;
-// const formData = {
-//   name: contactName.value,
-//   contact: contactEmail.value,
-//   text: contactText.value,
-// };
-
-// // if (formData.name.value === '' || formData.contact.value === '' || formData.text.value === '') {
-// // storage = [];
-// // }
-
-// if (localStorage.getItem('formData') === null){
-//   storage = {}
-// } else {
-//   storage = JSON.parse(localStorage.getItem('formData'))
-// }

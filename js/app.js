@@ -51,7 +51,7 @@ const projectData = [
   },
   {
     id: 3,
-    name: 'PROJECT 3',
+    name: 'PROJECT 3'1,
     detail: ['CANOPY', '.', 'Back end Dev', '.', 2015],
     img: './asset/images/portfolio-3.jpg',
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
@@ -271,25 +271,25 @@ function validateEmail(e) {
 contactForm.addEventListener('submit', validateEmail);
 
 // Local Storage
-const formData = {
-  name: contactName.value,
-  contact: contactEmail.value,
-  text: contactText.value
-}
-
-let storage;
-const formData = {
-  name: contactName.value,
-  contact: contactEmail.value,
-  text: contactText.value,
-};
-
-// if (formData.name.value === '' || formData.contact.value === '' || formData.text.value === '') {
-// storage = [];
+// const formData = {
+//   name: contactName.value,
+//   contact: contactEmail.value,
+//   text: contactText.value
 // }
 
-if (localStorage.getItem('formData') === null){
-  storage = {}
-} else {
-  storage = JSON.parse(localStorage.getItem('formData'))
-}
+// let storage;
+// const formData = {
+//   name: contactName.value,
+//   contact: contactEmail.value,
+//   text: contactText.value,
+// };
+
+// // if (formData.name.value === '' || formData.contact.value === '' || formData.text.value === '') {
+// // storage = [];
+// // }
+
+// if (localStorage.getItem('formData') === null){
+//   storage = {}
+// } else {
+//   storage = JSON.parse(localStorage.getItem('formData'))
+// }

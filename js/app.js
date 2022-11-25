@@ -246,7 +246,10 @@ modal.addEventListener('click', (e) => {
 
 // Form Validation
 const contactForm = document.querySelector('.contact__form');
+const contactName = document.querySelector('.contact__name');
 const contactEmail = document.querySelector('.contact__email');
+const contactText = document.querySelector('.contact__text');
+
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const err = document.querySelector('.submit-error');
 
@@ -266,3 +269,11 @@ function validateEmail(e) {
 }
 
 contactForm.addEventListener('submit', validateEmail);
+
+// Local Storage
+const formData = {
+  name: contactName.value,
+  contact: contactEmail.value,
+  text: contactText.value
+}
+

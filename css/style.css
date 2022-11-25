@@ -444,6 +444,7 @@ section.work {
   font-weight: 400;
   text-transform: uppercase;
   color: #5663db;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -458,6 +459,7 @@ section.work {
   width: fit-content;
   background-color: white;
   white-space: nowrap;
+  cursor: pointer;
   margin-right: 20px;
   transition-property: transform;
   transition-duration: 1s;
@@ -477,6 +479,11 @@ section.work {
 
 .contact__cta {
   margin-top: 20px;
+}
+
+.contact__cta:active {
+  background: #5864e6;
+  background-color: ;
 }
 
 .popup-btn-img {

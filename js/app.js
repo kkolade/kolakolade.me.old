@@ -244,23 +244,25 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-// form validation
+// Form Validation
 const contactForm = document.querySelector('.contact__form');
 const contactEmail = document.querySelector('.contact__email');
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const err = document.querySelector('.submit-error');
 
 function validateEmail(e) {
-  e.preventDefault();
+  //  const emailValue = contactEmail.value;
 
-  if (!contactEmail.value.match(regEx)) {
-    err.style.display = 'block';
-    err.innerHTML = 'Email feild should only contain lowercase letters';
-    contactEmail.style.border = '1px solid rgb(204, 11, 11)';
-    return false;
+  if (contactEmail.value.match(regEx)) {
+    err.style.display = 'none';
+    contactEmail.style.border = '1px solid #d0d9d4';
+    return true;
   }
-
-  return true;
+  e.preventDefault();
+  err.style.display = 'block';
+  err.innerHTML = 'Email feild should only contain lowercase letters';
+  contactEmail.style.border = '2px solid rgb(204, 11, 11)';
+  return false;
 }
 
 contactForm.addEventListener('submit', validateEmail);

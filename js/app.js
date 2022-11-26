@@ -244,18 +244,43 @@ modal.addEventListener('click', (e) => {
   }
 });
 
-// Form Validation
+// Form Validation and LocalStorage
 const contactForm = document.querySelector('.contact__form');
+const contactName = document.querySelector('.contact__name');
 const contactEmail = document.querySelector('.contact__email');
+const contactText = document.querySelector('.contact__text');
 const regEx = /^[a-z0-9]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
 const err = document.querySelector('.submit-error');
+let formData;
 
+// Function to add form data to localStorage
+const addDataToLS = () => {
+  formData = {
+    name: contactName.value,
+    email: contactEmail.value,
+    text: contactText.value,
+  };
+  localStorage.setItem('form-data', JSON.stringify(formData));
+};
+
+// function to get data from localStorage
+const getDataFromLS = () => {
+  if (localStorage.getItem('form-data') === null) {
+    formData = {};
+  } else {
+    formData = JSON.parse(localStorage.getItem('form-data'));
+  }
+  contactName.value = formData.name;
+  contactEmail.value = formData.email;
+  contactText.value = formData.text;
+};
+
+// function to validate email field
 function validateEmail(e) {
-  //  const emailValue = contactEmail.value;
-
   if (contactEmail.value.match(regEx)) {
     err.style.display = 'none';
     contactEmail.style.border = '1px solid #d0d9d4';
+    addDataToLS();
     return true;
   }
   e.preventDefault();
@@ -264,5 +289,5 @@ function validateEmail(e) {
   contactEmail.style.border = '2px solid rgb(204, 11, 11)';
   return false;
 }
-
+document.addEventListener('DOMContentLoaded', getDataFromLS);
 contactForm.addEventListener('submit', validateEmail);

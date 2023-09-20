@@ -63,7 +63,7 @@ This project is my personal portfolio to showcase my skills and projects I have 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](github.io/kkolade)
+- [Live Demo Link](https://kkolade.github.io/kolakolade.me/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
